@@ -18,7 +18,7 @@ void Movimentacao::setDescricao(char* movimentacao){
 }
 
 
-void Movimentacao::setMovimentacaoTipo(int tipo){
+void Movimentacao::setMovimentacaoTipo(TipoDeMovimento tipo){
   this->tipoDeMovimento = tipo;
 }
 void Movimentacao::setFornecedor(Fornecedor f1){

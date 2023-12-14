@@ -5,23 +5,23 @@ void Fornecedor::setId(int id){
   this->id = id;
 }
 
-void Fornecedor::setCnpj(char* cnpj){
+void Fornecedor::setCnpj(const char* cnpj){
   std::strcpy(this->cnpj, cnpj);  
 }
 
-void Fornecedor::setRazaoSocial(char* razaoSocial){
+void Fornecedor::setRazaoSocial(const char* razaoSocial){
   std::strcpy(this->razaoSocial, razaoSocial);
 }
 
-void Fornecedor::setEndereco(char* endereco){
+void Fornecedor::setEndereco(const char* endereco){
   std::strcpy(this->endereco, endereco);
 }
 
-void Fornecedor::setNomeDeContato(char* nomeDeContato){
+void Fornecedor::setNomeDeContato(const char* nomeDeContato){
   std::strcpy(this->nomeDeContato, nomeDeContato);
 }
 
-void Fornecedor::setTelefoneDeContato(char* telefoneDeContato){
+void Fornecedor::setTelefoneDeContato(const char* telefoneDeContato){
   std::strcpy(this->telefoneDeContato, telefoneDeContato);
 }
 

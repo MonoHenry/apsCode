@@ -12,7 +12,7 @@ Produto ProdutoDAO::retrieve(int idProduto){
 	return nullProduto;
 }
 
-Produto* ProdutoDAO::consultarProdutos(char* nome){
+Produto* ProdutoDAO::queryByNome(char* nome){
 
 	int pos = 0;
 	Produto* listaProdutosConsultados = new Produto[100];
@@ -28,22 +28,10 @@ Produto* ProdutoDAO::consultarProdutos(char* nome){
 
 }
 
-void ProdutoDAO::update(Movimentacao m1){
-  for(int i = 0; (this->listaProdutos+i)->getId() != 0; i++){
-    if(m1.getProduto().getId() == (this->listaProdutos+i)->getId()){
-      if(m1.getMovimentacaoTipo() == 0){
-
-	int quantidade = (this->listaProdutos+i)->getQuantidade() + m1.getQuantidade();
-        (this->listaProdutos+i)->setQuantidade(quantidade);
-	break;
-
-      }else{
-
-	int quantidade = (this->listaProdutos+i)->getQuantidade() - m1.getQuantidade();
-	(this->listaProdutos+i)->setQuantidade(quantidade);
-	break;
-				
-      }
-    }
-  }
+void ProdutoDAO::update(Produto p1){
+	for(int i = 0; i < MAX_PROD; i++){
+		if(p1.getId() == (this->listaProdutos+i)->getId()){
+			*(this->listaProdutos+i) = p1;
+		}
+	}
 }

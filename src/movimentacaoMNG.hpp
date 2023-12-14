@@ -1,32 +1,39 @@
 #pragma once
 #include "movimentacaoDAO.hpp"
 #include "fornecedor.hpp"
-#include "produtoDAO.hpp"
+#include "produtoMNG.hpp"
 #include "movimentacao.hpp"
 #include "fornecedorDAO.hpp"
 #include "interfaceMNG.hpp"
+#include "produtoDAO.hpp"
+#include "fornecedorMNG.hpp"
 
 class MovimentacaoMNG{
 private:
   InterfaceMNG* interfaceMNG = new InterfaceMNG();
   MovimentacaoDAO* movimentacaoDAO = new MovimentacaoDAO();  
-  Movimentacao movimentacao; 
+  Movimentacao* movimentacao = new Movimentacao(); 
   Produto* produto = new Produto();
   Fornecedor* fornecedor = new Fornecedor();
-  FornecedorDAO* fornecedorDAO = new FornecedorDAO();
-  ProdutoDAO* produtoDAO = new ProdutoDAO();
+  FornecedorMNG* fornecedorMNG = new FornecedorMNG();
+  FornecedorDAO* &fornecedorDAO = this->fornecedorMNG->fornecedorDAO;
+  ProdutoMNG* produtoMNG = new ProdutoMNG();
+  ProdutoDAO* &produtoDAO = this->produtoMNG->produtoDAO;
 
-  void setMovimentacaoAtual(Movimentacao m1);
-  Movimentacao getMovimentacaoAtual();
+  void setMovimentacaoAtual(Movimentacao*);
+  Movimentacao* getMovimentacaoAtual();
   void iniciarRegistroSaida();
-  void registrarSaidaProduto(int, int, char*);
+  void registrarSaidaProduto(Produto, int, char*);
   void concluirMovimentacao();
   void iniciarRegistroEntrada();
   void registrarSaidaProdutos();
-  void registrarEntradaProduto(int , int, float, int, int, char*);
+  void registrarEntradaProduto(Produto, Fornecedor, float, int, int, char*);
+  void setProdutoAtual(Produto*);
+  Produto* getProdutoAtual();
 public:
 
-  Produto* consultarProdutos(char*);
+  Produto* queryByNome(char*);
+  Fornecedor* queryByRazaoSocial(char*);
   void registrarSaida();
   void registrarEntrada();
 

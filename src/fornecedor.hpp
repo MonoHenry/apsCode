@@ -3,19 +3,19 @@
 class Fornecedor{
 private:
   int id;
-  char cnpj[14];
+  char cnpj[15];
   char razaoSocial[100];
   char endereco[100];
   char nomeDeContato[100];
-  char telefoneDeContato[100];
+  char telefoneDeContato[11];
 public:
   void setId(int);
-  void setCnpj(char*);
-  void setRazaoSocial(char*);
-  void setEndereco(char*);
-  void setNomeDeContato(char*);
-  void setTelefoneDeContato(char*);
- 
+  void setRazaoSocial(const char*);
+  void setEndereco(const char*);
+  void setNomeDeContato(const char*);
+  void setTelefoneDeContato(const char*);
+  void setCnpj(const char*);
+
   int getId();
   char* getCnpj();
   char* getRazaoSocial();

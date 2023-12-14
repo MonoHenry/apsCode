@@ -2,13 +2,13 @@
 #include <time.h>
 #include "produto.hpp"
 #include "fornecedor.hpp"
-
+#include "enum.hpp"
 class Movimentacao{
 private:
   int id = 0;
   time_t data;
   float preco;
-  int tipoDeMovimento;
+  TipoDeMovimento tipoDeMovimento;
   int lote;
   int quantidade;
   char codigoNotaFiscal[100];
@@ -19,7 +19,7 @@ public:
   void setProduto(Produto);
   void setQuantidade(int);
   void setDescricao(char*);
-  void setMovimentacaoTipo(int);
+  void setMovimentacaoTipo(TipoDeMovimento);
   void setFornecedor(Fornecedor);
   void setPreco(float);
   void setLote(int);

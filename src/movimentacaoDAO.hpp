@@ -11,6 +11,6 @@ private:
 
 public:
   Movimentacao* create();
-  void store(Movimentacao m1);
+  void update(Movimentacao m1);
 
 };
