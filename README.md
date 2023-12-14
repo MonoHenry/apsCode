@@ -1,2 +1,16 @@
-How to compike?
-Just type make on the terminal, if it doesn't work, type ./Makefile, then make.
+**Dependecias**
+
+Precisa do g++ e do make.
+
+**Como compilar?**
+
+Git clone o repositório.
+
+Vá na pasta apsCode/.
+
+Vá na pasta src/.
+
+Digite "make" no terminal.
+
+Execute o arquivo "main".
+
