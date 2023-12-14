@@ -33,6 +33,8 @@ private:
 public:
 
   Produto* queryByNome(char*);
+  Produto* queryAll();
+  Fornecedor* queryAllFornecedores();
   Fornecedor* queryByRazaoSocial(char*);
   void registrarSaida();
   void registrarEntrada();

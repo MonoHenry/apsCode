@@ -26,3 +26,19 @@ Fornecedor* FornecedorDAO::queryByRazaoSocial(char* razaoSocial){
 	return listaFornecedoresConsultados;
 
 }
+
+Fornecedor* FornecedorDAO::queryAllFornecedores(){
+
+	int pos = 0;
+	Fornecedor* listaFornecedoresConsultados = new Fornecedor[100];
+
+	for(int i = 0; i < MAX_FORNECEDOR; i++){
+
+		if((this->listaFornecedores+i)->getId() != 0){
+			*(listaFornecedoresConsultados + pos++) = this->listaFornecedores[i];
+		}
+
+	}
+	return listaFornecedoresConsultados;
+
+}

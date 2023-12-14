@@ -11,6 +11,7 @@ private:
 public:
   Produto retrieve(int);
   Produto* queryByNome(char*);
+  Produto* queryAll();
   void update(Produto);
   ProdutoDAO()
   {

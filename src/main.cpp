@@ -28,31 +28,70 @@ int main(){
 	    }
 	    case 2:
 	      {
-		std::cout << "NÃO IMPLEMENTADO" << std::endl;
+
+		Produto* listaProd = movimentacaoMNG->queryAll(); 
+		interfaceMNG->produtosConsultadosMenu(listaProd);
 		break;
 	    }
-
 	    case 3:
 	      {
-		movimentacaoMNG->registrarSaida();
 		break;
 	    }
 	    case 4:
 	      {
+		movimentacaoMNG->registrarSaida();
+		break;
+	    }
+	    case 5:
+	      {
 		movimentacaoMNG->registrarEntrada();
+		break;
+	    }
+
+	    case 0:
+	      {
 		break;
 	    }
 	  }
 
 	  break;
-	}
+      }
       case 2:
 	{
 	  int choice2;
-	  interfaceMNG->funcionariosMenu();
+	  interfaceMNG->fornecedoresMenu();
+	  std::cin >> choice2;
 
+	  switch(choice2)
+	  {
+	    case 1:
+	      {
+		char razaoSocial[100];
+		std::cout << "Digite o nome do fornecedor" << std::endl;
+		std::cin >> razaoSocial;
+		Fornecedor* listaFornecedor = movimentacaoMNG->queryByRazaoSocial(razaoSocial);
+		interfaceMNG->fornecedoresConsultadosMenu(listaFornecedor);
+		break;
+	    }
+	    case 2:
+	      {
+		Fornecedor* listaFornecedor = movimentacaoMNG->queryAllFornecedores();
+		interfaceMNG->fornecedoresConsultadosMenu(listaFornecedor);
+		break;
+	    }
+	    case 3:
+	      {
+		std::cout << "NÃO IMPLEMENTADO" << std::endl;
+		break;
+	    }
+
+	    case 0:
+	      {
+		break;
+	    }
+	  }
 	  break;
-	}
+      }
     }
 
 

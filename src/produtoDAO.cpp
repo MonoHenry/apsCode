@@ -28,6 +28,22 @@ Produto* ProdutoDAO::queryByNome(char* nome){
 
 }
 
+Produto* ProdutoDAO::queryAll(){
+
+	int pos = 0;
+	Produto* listaProdutosConsultados = new Produto[100];
+
+	for(int i = 0; i < MAX_PROD; i++){
+
+		if((this->listaProdutos+i)->getId() != 0){
+			*(listaProdutosConsultados + pos++) = this->listaProdutos[i];
+		}
+
+	}
+	return listaProdutosConsultados;
+
+}
+
 void ProdutoDAO::update(Produto p1){
 	for(int i = 0; i < MAX_PROD; i++){
 		if(p1.getId() == (this->listaProdutos+i)->getId()){

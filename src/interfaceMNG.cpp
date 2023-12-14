@@ -20,13 +20,35 @@ void InterfaceMNG::produtosMenu(){
   std::cout << "+========================================+" << std::endl;
   std::cout << "|Escolha uma opção para Produtos:        |" << std::endl;
   std::cout << "+========================================+" << std::endl;
-  std::cout << "|1. Consultar Produtos:                  |" << std::endl;
+  std::cout << "|1. Consultar Produto.                   |" << std::endl;
   std::cout << "+========================================+" << std::endl;
-  std::cout << "|2. Cadastrar Produtos:                  |" << std::endl;
+  std::cout << "|2. Consultar Estoque de Produtos.       |" << std::endl;
   std::cout << "+========================================+" << std::endl;
-  std::cout << "|3. Registrar saída de produtos:         |" << std::endl;
+  std::cout << "|3. Cadastrar Produtos.                  |" << std::endl;
   std::cout << "+========================================+" << std::endl;
-  std::cout << "|4. Registrar entrada de produtos:       |" << std::endl;
+  std::cout << "|4. Registrar Saída de Produtos.         |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|5. Registrar Entrada de Produtos.       |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|0. Retornar.                            |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+
+
+}
+
+void InterfaceMNG::fornecedoresMenu(){
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "| Escolha uma opção.                     |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|1. Consultar Fornecedor.                |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|2. Consultar Todos os Fornecedores.     |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|3. Cadastrar Fornecedores.              |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|4. Deletar Funcionários.                |" << std::endl;
+  std::cout << "+========================================+" << std::endl;
+  std::cout << "|0. Retornar.                            |" << std::endl;
   std::cout << "+========================================+" << std::endl;
 }
 

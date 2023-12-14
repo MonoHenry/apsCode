@@ -11,6 +11,16 @@ Produto* MovimentacaoMNG::queryByNome(char* nome){
   return lista;
 }
 
+Produto* MovimentacaoMNG::queryAll(){
+  Produto* lista = this->produtoMNG->queryAll();
+  return lista;
+}
+
+Fornecedor* MovimentacaoMNG::queryAllFornecedores(){
+  Fornecedor* lista = this->fornecedorMNG->queryAllFornecedores();
+  return lista;
+}
+
 Fornecedor* MovimentacaoMNG::queryByRazaoSocial(char* razaoSocial){
   Fornecedor* lista = this->fornecedorMNG->listarFornecedores(razaoSocial);
   return lista;

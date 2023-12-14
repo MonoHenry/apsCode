@@ -21,4 +21,5 @@ public:
   }
   Fornecedor* queryByRazaoSocial(char*);
   Fornecedor retrieve(int);
+  Fornecedor* queryAllFornecedores();
 };
