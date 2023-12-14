@@ -1,13 +1,13 @@
 #define MAX_FORNECEDOR 100
 #include "fornecedorDAO.hpp"
 
-Fornecedor FornecedorDAO::retrieve(int idFornecedor){
+Fornecedor* FornecedorDAO::retrieve(int idFornecedor){
   for(int i = 0; i < MAX_FORNECEDOR; i++){
     if(idFornecedor == this->listaFornecedores[i].getId()){
-      return this->listaFornecedores[i];
+      return this->listaFornecedores+i;
     }
   }
-  return nullFornecedor;
+  return &nullFornecedor;
 }
 
 

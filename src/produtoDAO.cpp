@@ -3,13 +3,13 @@
 #include <cstring>
 #include <cstdlib>
 
-Produto ProdutoDAO::retrieve(int idProduto){
+Produto* ProdutoDAO::retrieve(int idProduto){
 	for(int i = 0; i < MAX_PROD; i++){
 		if(idProduto == listaProdutos[i].getId()){
-			return listaProdutos[i];
+			return listaProdutos+i;
 		}
 	}
-	return nullProduto;
+	return &nullProduto;
 }
 
 Produto* ProdutoDAO::queryByNome(char* nome){
@@ -44,10 +44,10 @@ Produto* ProdutoDAO::queryAll(){
 
 }
 
-void ProdutoDAO::update(Produto p1){
+void ProdutoDAO::update(Produto* p1){
 	for(int i = 0; i < MAX_PROD; i++){
-		if(p1.getId() == (this->listaProdutos+i)->getId()){
-			*(this->listaProdutos+i) = p1;
+		if(p1->getId() == (this->listaProdutos+i)->getId()){
+			*(this->listaProdutos+i) = *p1;
 		}
 	}
 }

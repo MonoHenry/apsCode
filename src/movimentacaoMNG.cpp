@@ -27,11 +27,11 @@ Produto* MovimentacaoMNG::getProdutoAtual(){
 }
 
 void MovimentacaoMNG::setMovimentacaoAtual(Movimentacao* m1){
-  this->movimentacao = m1;
+  this->movimentacaoAtual = m1;
 }
 
 Movimentacao* MovimentacaoMNG::getMovimentacaoAtual(){
-  return this->movimentacao;
+  return this->movimentacaoAtual;
 }
 
 void MovimentacaoMNG::iniciarRegistroSaida(){
@@ -48,10 +48,10 @@ void MovimentacaoMNG::iniciarRegistroEntrada(){
   this->setMovimentacaoAtual(m1);
 }
 
-void MovimentacaoMNG::registrarSaidaProduto(Produto p1,int quantidade,char* descricao){
+void MovimentacaoMNG::registrarSaidaProduto(Produto* p1,int quantidade,char* descricao){
   Movimentacao* m1 = getMovimentacaoAtual(); 
-  int qtde = p1.getQuantidade();
-  p1.setQuantidade(qtde - quantidade);
+  int qtde = p1->getQuantidade();
+  p1->setQuantidade(qtde - quantidade);
   m1->setProduto(p1);
   m1->setQuantidade(quantidade);
   m1->setDescricao(descricao);
@@ -59,18 +59,18 @@ void MovimentacaoMNG::registrarSaidaProduto(Produto p1,int quantidade,char* desc
 
 void MovimentacaoMNG::concluirMovimentacao(){
   Movimentacao* m1 = getMovimentacaoAtual();
-  Produto p1 = m1->getProduto();
+  Produto* p1 = m1->getProduto();
   this->produtoDAO->update(p1);
   this->movimentacaoDAO->update(*m1);
 
 }
 
-void MovimentacaoMNG::registrarEntradaProduto(Produto p1,Fornecedor f1,float preco,int quantidade,int lote,char* codigoNotaFiscal){
+void MovimentacaoMNG::registrarEntradaProduto(Produto* p1,Fornecedor* f1,float preco,int quantidade,int lote,char* codigoNotaFiscal){
 
   Movimentacao* m1 = getMovimentacaoAtual();
 
-  int qtde = p1.getQuantidade();
-  p1.setQuantidade(qtde + quantidade);
+  int qtde = p1->getQuantidade();
+  p1->setQuantidade(qtde + quantidade);
   m1->setProduto(p1);
   m1->setFornecedor(f1);
   m1->setPreco(preco);

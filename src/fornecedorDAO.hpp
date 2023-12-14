@@ -20,6 +20,6 @@ public:
     this->listaFornecedores[0].setTelefoneDeContato("11994990876");
   }
   Fornecedor* queryByRazaoSocial(char*);
-  Fornecedor retrieve(int);
+  Fornecedor* retrieve(int);
   Fornecedor* queryAllFornecedores();
 };

@@ -1,0 +1,3 @@
+class Cargo{
+  Cargo* cargo;
+};

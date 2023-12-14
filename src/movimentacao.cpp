@@ -1,7 +1,7 @@
 #include "movimentacao.hpp"
 #include <cstring>
 
-void Movimentacao::setProduto(Produto p1){
+void Movimentacao::setProduto(Produto* p1){
   this->produto = p1;
 }
 
@@ -21,7 +21,7 @@ void Movimentacao::setDescricao(char* movimentacao){
 void Movimentacao::setMovimentacaoTipo(TipoDeMovimento tipo){
   this->tipoDeMovimento = tipo;
 }
-void Movimentacao::setFornecedor(Fornecedor f1){
+void Movimentacao::setFornecedor(Fornecedor* f1){
   this->fornecedor = f1;
 }
 
@@ -33,7 +33,7 @@ void Movimentacao::setNotaFiscal(char* codigoNotaFiscal){
   strcpy(this->codigoNotaFiscal, codigoNotaFiscal);
 }
 
-Produto Movimentacao::getProduto(){
+Produto* Movimentacao::getProduto(){
   return this->produto;
 }
 
@@ -53,7 +53,7 @@ char* Movimentacao::getDescricao(){
 int Movimentacao::getMovimentacaoTipo(){
   return this->tipoDeMovimento;
 }
-Fornecedor Movimentacao::getFornecedor(){
+Fornecedor* Movimentacao::getFornecedor(){
   return this->fornecedor;
 }
 

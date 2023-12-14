@@ -8,6 +8,6 @@ private:
   int storePos = 0;
 
 public: 
-  Funcionario create();
-  void store(Funcionario);
+  Funcionario* create();
+  void update(Funcionario*);
 };

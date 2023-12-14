@@ -10,7 +10,7 @@ class MovimentacaoMNG{
 private:
   InterfaceMNG* interfaceMNG;
   MovimentacaoDAO* movimentacaoDAO;  
-  Movimentacao* movimentacao; 
+  Movimentacao* movimentacaoAtual; 
   Produto* produto;
   Fornecedor* fornecedor;
   FornecedorDAO* fornecedorDAO;
@@ -23,11 +23,11 @@ public:
   void setMovimentacaoAtual(Movimentacao*);
   Movimentacao* getMovimentacaoAtual();
   void iniciarRegistroSaida();
-  void registrarSaidaProduto(Produto, int, char*);
+  void registrarSaidaProduto(Produto*, int, char*);
   void concluirMovimentacao();
   void iniciarRegistroEntrada();
   void registrarSaidaProdutos();
-  void registrarEntradaProduto(Produto, Fornecedor, float, int, int, char*);
+  void registrarEntradaProduto(Produto*, Fornecedor*, float, int, int, char*);
   void setProdutoAtual(Produto*);
   Produto* getProdutoAtual();
 

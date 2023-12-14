@@ -2,9 +2,9 @@
 class Produto{
 private:
   int id;
-  int quantidade;
   char nome[50];
   int status;
+  int quantidade;
   int quantidadeMinima;
 public:
   void setId(int);

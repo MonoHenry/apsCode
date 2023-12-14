@@ -116,7 +116,7 @@ int main(){
 		  std::cout << "Qual produto? Digite o ID, apenas números" << std::endl;
 		  std::cin >> id;
 		}
-		Produto p1 = produtoDAO->retrieve(id);
+		Produto* p1 = produtoDAO->retrieve(id);
 		std::cout << "Qual a quantidade?" << std::endl;
 		std::cin >> quantidade;
 
@@ -236,7 +236,7 @@ int main(){
 		  std::cout << "Qual produto? Digite o ID, apenas números" << std::endl;
 		  std::cin >> idProd;
 		}
-		Produto p1  = produtoDAO->retrieve(idProd);
+		Produto* p1  = produtoDAO->retrieve(idProd);
 
 		std::cout << "Quem é o fornecedor? Digite o ID" << std::endl;
 		std::cin >> idFornecedor;
@@ -246,7 +246,7 @@ int main(){
 		  std::cout << "Qual produto? Digite o ID, apenas números" << std::endl;
 		  std::cin >> idFornecedor;
 		}
-		Fornecedor f1 = fornecedorDAO->retrieve(idFornecedor);
+		Fornecedor* f1 = fornecedorDAO->retrieve(idFornecedor);
 
 		std::cout << "Qual o preço?" << std::endl;
 		std::cin >> preco;

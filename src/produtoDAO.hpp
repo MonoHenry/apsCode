@@ -9,10 +9,10 @@ private:
   Produto listaProdutos[MAX_PROD] = {nullProduto};
 
 public:
-  Produto retrieve(int);
+  Produto* retrieve(int);
   Produto* queryByNome(char*);
   Produto* queryAll();
-  void update(Produto);
+  void update(Produto*);
   ProdutoDAO()
   {
     this->nullProduto.setId(0);
