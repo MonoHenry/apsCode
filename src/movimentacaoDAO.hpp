@@ -5,8 +5,9 @@
 
 class MovimentacaoDAO{
 private:
+
   Movimentacao* movimentacao;
-  Movimentacao listaProdutos[MAX_PROD];
+  Movimentacao listaProdutos[100];
   int storePos = 0;
 
 public:

@@ -6,5 +6,6 @@ private:
 public:
   Produto* listarProdutos(char*);
   Produto* queryAll();
-  ProdutoDAO* produtoDAO = new ProdutoDAO();
+  ProdutoDAO* produtoDAO;
+  void setProdutoDao(ProdutoDAO*);
 };

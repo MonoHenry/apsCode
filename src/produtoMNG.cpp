@@ -10,4 +10,6 @@ Produto* ProdutoMNG::queryAll(){
   return lp1;
 }
 
-
+void ProdutoMNG::setProdutoDao(ProdutoDAO* pDAO){
+  this->produtoDAO = pDAO;
+}

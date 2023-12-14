@@ -63,7 +63,7 @@ int InterfaceMNG::produtosConsultadosMenu(Produto* lista){
     std::cout << "Quantidade: "<< lista[i].getQuantidade() << std::endl;
     std::cout << "Nome: "<< lista[i].getNome() << std::endl;
     std::cout << "Status: "<< lista[i].getStatus() << std::endl;
-    std::cout << "Quantidade mínima:"<< lista[i].getQuantidadeMinima() << std::endl;
+    std::cout << "Quantidade mínima: "<< lista[i].getQuantidadeMinima() << std::endl;
     std::cout << std::endl;}
   }
   return nums;
@@ -93,8 +93,8 @@ int InterfaceMNG::fornecedoresConsultadosMenu(Fornecedor* lista){
     std::cout << "CNPJ: "<< lista[i].getCnpj() << std::endl;
     std::cout << "Razao Social: "<< lista[i].getRazaoSocial() << std::endl;
     std::cout << "Endereço: "<< lista[i].getEndereco() << std::endl;
-    std::cout << "Nome de contato:"<< lista[i].getNomeDeContato() << std::endl;
-    std::cout << "Telefone de contato:"<< lista[i].getTelefoneDeContato() << std::endl;
+    std::cout << "Nome de contato: "<< lista[i].getNomeDeContato() << std::endl;
+    std::cout << "Telefone de contato: "<< lista[i].getTelefoneDeContato() << std::endl;
     std::cout << std::endl;}
   }
   return nums;

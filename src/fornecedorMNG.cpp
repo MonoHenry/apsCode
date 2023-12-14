@@ -9,3 +9,7 @@ Fornecedor* FornecedorMNG::queryAllFornecedores(){
   Fornecedor* lf1 = this->fornecedorDAO->queryAllFornecedores();
   return lf1;
 }
+
+void FornecedorMNG::setFornecedorDao(FornecedorDAO* fDAO){
+  this->fornecedorDAO = fDAO;
+}

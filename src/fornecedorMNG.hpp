@@ -6,5 +6,6 @@ private:
 public:
   Fornecedor* listarFornecedores(char*);
   Fornecedor* queryAllFornecedores();
-  FornecedorDAO* fornecedorDAO = new FornecedorDAO();
+  FornecedorDAO* fornecedorDAO;
+  void setFornecedorDao(FornecedorDAO*);
 };
